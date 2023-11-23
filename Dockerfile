@@ -1,4 +1,2 @@
-FROM openjdk:8
-COPY /target/my-web-app.war /usr/app/
-WORKDIR  /usr/app/
-ENTRYPOINT ["java","-jar","my-web-app.war"]
+FROM tomcat:8.5.47-jdk8-openjdk
+COPY /target/my-web-app.war /usr/local/tomcat/webapps
